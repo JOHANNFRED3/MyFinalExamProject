@@ -1,0 +1,13 @@
+name: Pull Request Message
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  display_message:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display a message
+        run: echo "Une nouvelle pull request a été créée ou mise à jour !"
